@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcionamiento del Sistema | Aquasense</title>
+  <style>
+/* 🎨 Paleta de colores */
+:root {
+  --azul-agua: #acd5e7;
+  --azul-oscuro: #687df1;
+  --blanco: #ffffff;
+}
+
+/* 🧩 Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 🌊 Fondo */
+body {
+  background-image: url('https://www.ppi-gmbh.de/wp-content/uploads/2017/04/Fotolia_114759084_Subscription_Monthly_M-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Logo en el header */
+.logo-img {
+  height: 75px;       /* altura del logo */
+  width: auto;        /* mantiene proporción */
+  display:flex;
+}
+
+
+/* 🔹 Header */
+header {
+  background-color: var(--azul-agua);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header nav a {
+  margin-left: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+header nav a:hover,
+header nav a.activo {
+  color: var(--azul-oscuro);
+}
+
+/* 🔹 Sección principal */
+.funcionamiento {
+  max-width: 900px;
+  margin: 80px auto;
+  background-color: var(--blanco);
+  padding: 40px 25px;
+  border: 2px solid var(--azul-agua);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✨ Animación hover para cartas */
+.funcionamiento:hover,
+.card:hover,
+.card-presentacion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.funcionamiento p,
+.card p,
+.card-presentacion p {
+  text-align: justify;
+}
+
+
+/* ✨ Transición suave de aparición */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.funcionamiento h1 {
+  color: var(--azul-oscuro);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.funcionamiento p {
+  color: #333;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* 🔹 Contenedor del prototipo */
+.prototipo {
+  background-color: var(--azul-agua);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  max-width: 800px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prototipo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.prototipo img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 3px solid var(--azul-oscuro);
+  transition: transform 0.3s ease;
+}
+
+.prototipo img:hover {
+  transform: scale(1.03);
+}
+
+/* 🔹 Footer */
+footer {
+  text-align: center;
+  color: var(--blanco);
+  margin-top: 60px;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .funcionamiento {
+    margin: 40px 15px;
+    padding: 25px 15px;
+  }
+
+  .funcionamiento h1 {
+    font-size: 2rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Header -->
+  <header>
+  <div class="logo">
+    <!-- Reemplaza 'imagenes/logo.png' por la ruta de tu imagen -->
+    <img src="imagenes/logo.jpg" alt="Aquasense" class="logo-img">
+  </div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="funcionamiento.html">Sobre el proyecto</a>
+    <a href="prototipo.html">Sobre el prototipo</a>
+  </nav>
+</header>
+
+
+  <!-- 🔹 Sección funcionamiento -->
+  <section class="funcionamiento">
+    <h1>Problematica</h1>
+    <p>
+    Una gran parte del agua potable se desperdicia debido a fugas no detectadas en la red de distribución, siendo una dificultad notable en zonas urbanas con limitada disponibilidad de agua, sistemas de conducción obsoletos o inadecuados, las causas principales incluyen el envejecimiento de las cañerías y la falta de monitoreo. según Francisco Eduardo Hernández, Business Development Manager de Idrica LATAM, el problema del ANR(Agua no registrada) en la mayoría de los países de Latinoamérica “se origina en infraestructuras anticuadas, la escasa inversión en su modernización y una gestión deficiente, lo que ha generado sistemas de distribución altamente ineficientes” este problema representa un desperdicio critico de un recurso limitado, y el verdadero desafío a resolver es garantizar un suministro eficiente de agua mediante la detección temprana de fugas y la optimización de la gestión de las redes de distribución.
+    </p>
+  </section>
+
+    <!-- 🔹 Sección funcionamiento -->
+  <section class="funcionamiento">
+    <h1>Nuestra idea</h1>
+    <p>
+    AquaSense es un sensor piezoeléctrico que capta vibraciones estructurales de la tubería, mientras que el sensor ultrasónico detecta ondas de alta frecuencia generadas por la fuga. Al combinar ambas señales, el sistema confirma la existencia de la fuga y calcula su ubicación con un margen de error menor a 10 cm. Toda la información se envía a una app móvil donde el usuario visualiza en tiempo real el estado de la red, recibe alertas y recomendaciones de mantenimiento. Está fabricado en forma de abrazadera portátil con materiales reciclados a través de impresión 3D local. A diferencia de otras propuestas existentes, AquaSense es una solución económica, sostenible y fácil de operar que permite detectar fugas tempranas, reducir pérdidas de agua y promover un uso responsable del recurso.
+    </p>
+    <p>
+      Este proceso ayuda a prevenir daños estructurales, reducir el consumo innecesario de agua y mejorar la eficiencia general de los sistemas hidráulicos tanto en hogares como en empresas.
+    </p>
+  </section>
+
+   <section class="funcionamiento">
+    <h1>Innovacion</h1>
+    <p>
+      Nuestro sistema está diseñado para detectar fugas de agua de manera automática, utilizando sensores de humedad y flujo conectados a una placa Arduino. 
+      Cuando el sensor detecta una pérdida anormal, el sistema activa una alerta visual o sonora e incluso puede enviar notificaciones al usuario.
+    </p>
+    <p>
+      Este proceso ayuda a prevenir daños estructurales, reducir el consumo innecesario de agua y mejorar la eficiencia general de los sistemas hidráulicos tanto en hogares como en empresas.
+    </p>
+  </section>
+
+     <section class="funcionamiento">
+    <h1>Impacto en la gente</h1>
+    <p>
+      Nuestro sistema está diseñado para detectar fugas de agua de manera automática, utilizando sensores de humedad y flujo conectados a una placa Arduino. 
+      Cuando el sensor detecta una pérdida anormal, el sistema activa una alerta visual o sonora e incluso puede enviar notificaciones al usuario.
+    </p>
+    <p>
+      Este proceso ayuda a prevenir daños estructurales, reducir el consumo innecesario de agua y mejorar la eficiencia general de los sistemas hidráulicos tanto en hogares como en empresas.
+    </p>
+  </section>
+
+
+</body>
+</html>
+
