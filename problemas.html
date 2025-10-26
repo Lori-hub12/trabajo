@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problemática y Justificación</title>
+  <style>
+/* Colores */
+:root {
+  --azul-agua: #4ec5f8;
+  --azul-oscuro: #687df1;
+  --blanco:  #ffffff;
+  --gris-claro: #f4f4f4;
+  --gradiente1: linear-gradient(135deg, #ff595e, #ff927e);
+  --gradiente2: linear-gradient(135deg, #687df1, #4ec5f8);
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body y contenedor principal */
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  background: #111;
+  color: #fff;
+}
+
+/* Header */
+header {
+  background-color: var(--azul-agua);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav a {
+  margin-left: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--azul-oscuro);
+}
+
+/* Secciones estilo vertical / diapositiva */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  text-align: center;
+  gap: 40px;
+  background: var(--gradiente2);
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s forwards;
+}
+
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section h2 {
+  font-size: 4rem;
+  color: var(--blanco);
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+/* Tarjetas grandes */
+.card-presentacion, .card-metas {
+  width: 90%;
+  max-width: 900px;
+  min-height: 60%;
+  background: rgba(255,255,255,0.95);
+  color: var(--azul-oscuro);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: justify;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.card-presentacion:hover, .card-metas:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* Listas grandes y llamativas */
+.card-metas ol, .card-metas ul {
+  margin: 30px 0;
+  padding-left: 50px;
+  text-align: left;
+  line-height: 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.card-metas ol li { color: #ffef66; margin-bottom: 15px; }
+.card-metas ul li { color: #4ec5f8; margin-bottom: 15px; }
+
+/* Responsivo */
+@media(max-width: 768px){
+  section h2 { font-size: 3rem; }
+  .card-presentacion, .card-metas { padding: 25px; font-size: 1.3rem; line-height: 1.8rem; }
+}
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav>
+  <a href="index.html">Inicio</a>
+    <a href="problemas.html">problematica</a>
+    <a href="marco.html">marco teorico y prototipo</a>
+    <a href="conclusion.html">conclusion</a>
+  </nav>
+</header>
+
+<!-- Problemática -->
+<section class="quienes-somos" id="problematica">
+  <h2>Problemática</h2>
+  <div class="card-presentacion">
+    <p>
+     Las pulperías, estimadas en alrededor de 120 000 establecimientos en todo el país, representan un pilar económico y social para los barrios, al ofrecer productos fraccionados y créditos informales que permiten a muchas familias cubrir necesidades básicas (Revista Envío, 2023). Sin embargo, la falta de registros contables y de control de inventario provoca que sus dueños desconozcan los costos reales, operen únicamente con el flujo diario de efectivo y no cuenten con herramientas para proyectar utilidades o planificar compras. Esto genera pérdidas ocultas y una alta vulnerabilidad ante imprevistos económicos o cambios en el mercado. 
+    </p>
+
+  </div>
+</section>
+<hr>
+
+<!-- Justificación -->
+<section class="quienes-somos" id="justificacion">
+  <h2>Justificación</h2>
+  <div class="card-metas">
+    <p>
+La presente investigación se justifica por su conveniencia al abordar una necesidad crítica y real para la microempresa. Las pulperías, pilares de la economía de los barrios en Nicaragua, operan mayormente en la informalidad y sin herramientas de gestión, lo que resulta en pérdidas financieras, escaso control de inventario y limitaciones de crecimiento. El diseño de una aplicación móvil busca ofrecer una solución accesible y funcional para las  pulperías del Distrito I de Managua, respondiendo directamente a un problema práctico que se traduce en una mejora tangible en la eficiencia operativa y la rentabilidad del negocio. 
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

@@ -3,311 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detección de Fugas de Agua</title>
+  <title>Nuestro trabajo metodologico</title>
   <style>
-    /* Colores */
-    :root {
-      --azul-agua: #4ec5f8;
-      --azul-oscuro: #687df1;
-       --blanco:  #ffffff;
-    }
-
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-
-    body {
-    background-image: url('https://www.ppi-gmbh.de/wp-content/uploads/2017/04/Fotolia_114759084_Subscription_Monthly_M-1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+/* Colores */
+:root {
+  --azul-agua: #4ec5f8;
+  --azul-oscuro: #687df1;
+  --blanco:  #ffffff;
+  --gris-claro: #f4f4f4;
+  --gradiente1: linear-gradient(135deg, #ff595e, #ff927e);
+  --gradiente2: linear-gradient(135deg, #687df1, #4ec5f8);
+  --gradiente3: linear-gradient(135deg, #8ac926, #ffca3a);
 }
 
-    
-/* Logo en el header */
-.logo-img {
-  height: 75px;       /* altura del logo */
-  width: auto;        /* mantiene proporción */
-  display:flex;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Body y contenedor principal */
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  background: #111;
+  color: #fff;
+}
 
-    /* Header */
-    header {
-      background-color: var(--azul-agua);
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* Header */
+header {
+  background-color: var(--azul-agua);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-    header nav a {
-      margin-left: 20px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+header nav a {
+  margin-left: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-    header nav a:hover {
-      color: var(--azul-oscuro);
-    }
+header nav a:hover {
+  color: var(--azul-oscuro);
+}
 
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 80px 20px 20px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
-    }
-
-
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    /* Imagen circular con efecto */
-    .logo-container {
-      width: 300px;
-      max-width: 80%;
-      height: 300px;
-      overflow: hidden;
-      border-radius: 50%;
-      border: 5px solid var(--azul-agua);
-      margin-bottom: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .logo-container:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .logo-container .logo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Nombre y frase */
-    .hero h1 {
-      color: var(--azul-oscuro);
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      color: var(--azul-agua);
-      font-size: 1.5rem;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-
-    /* Línea decorativa */
-    hr {
-      width: 100%;
-      border: 3px solid var(--azul-agua);
-      border-radius: 5px;
-      margin: 20px auto 0 auto;
-    }
-
-    /* Sección Quiénes Somos */
-.quienes-somos {
-  padding: 0px 20px;
+/* Hero / primera sección */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradiente1);
   text-align: center;
+  padding: 40px 20px;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
 }
 
-.quienes-somos h2 {
-  font-size: 2.5rem;
-  color: var(--azul-oscuro);
-  margin-bottom: 40px;
+.hero h1 {
+  font-size: 5rem; /* texto grande y llamativo */
+  color: var(--blanco);
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
 }
 
-/* Tarjeta de presentación */
-.card-presentacion {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: var(--blanco); /* fondo blanco sólido */
-  border: 2px solid var(--azul-oscuro);
-  border-radius: 15px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25); /* sombra más visible */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero h2 {
+  font-size: 2.5rem; /* subtítulo más grande */
+  color: var(--gris-claro);
+  font-weight: 300;
 }
 
-
-.card-presentacion:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+/* Animación general */
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
-.card-presentacion p {
-  color: var(--azul-oscuro);
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Sección Nuestras Metas */
-.nuestras-metas {
-  padding: 20px 20px; /* padding solicitado */
+/* Secciones estilo diapositiva */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
   text-align: center;
+  gap: 40px;
+  background: var(--gradiente2);
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s forwards;
 }
 
-.nuestras-metas h2 {
-  font-size: 2.5rem;
+/* Animación de secciones */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Títulos principales */
+section h2 {
+  font-size: 4rem; /* más grande */
+  color: var(--blanco);
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+/* Tarjetas de contenido grandes */
+.card-presentacion, .card-metas {
+  width: 90%; /* tarjeta amplia */
+  max-width: 900px;
+  min-height: 60%;
+  background: rgba(255,255,255,0.95);
   color: var(--azul-oscuro);
-  margin-bottom: 40px;
-}
-
-/* Tarjeta de metas */
-.card-metas {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: var(--blanco);
-  border: 2px solid var(--azul-agua);
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-metas:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-}
-
-.card-metas p {
-  color: var(--azul-oscuro);
-  font-size: 1.2rem;
-  line-height: 1.6;
-  text-align: left; /* texto alineado a la izquierda para listas */
-}
-
-.funcionamiento p,
-.card p,
-.card-presentacion p {
   text-align: justify;
+  font-size: 1.6rem; /* texto más grande */
+  line-height: 2.2rem;
 }
 
+.card-presentacion:hover, .card-metas:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
 
-/* Sección Equipo de Trabajo */
+/* Listas grandes y llamativas */
+.card-metas ol, .card-metas ul {
+  margin: 30px 0;
+  padding-left: 50px;
+  text-align: left;
+  line-height: 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.card-metas ol li {
+  color: #ffef66;
+  margin-bottom: 15px;
+}
+
+.card-metas ul li {
+  color: #4ec5f8;
+  margin-bottom: 15px;
+}
+
+/* Equipo de trabajo estilo diapositiva */
 .equipo-trabajo {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.equipo-trabajo h2 {
-  font-size: 2.5rem;
-  color: var(--azul-oscuro);
-  margin-bottom: 40px;
-}
-
-/* Contenedor de miembros */
 .team {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 }
 
-/* Tarjeta individual */
 .team-member {
-      background-color: var(--blanco); 
-   border: 2px solid var(--azul-agua);
-  border-radius: 15px;
-  width: 150px;
-  padding: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  width: 200px;
+  padding: 25px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
 }
 
-/* Imagen de cada integrante */
 .team-member img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin-bottom: 10px;
-  border: 3px solid var(--azul-agua);
+  border: 4px solid var(--azul-agua);
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
-/* Nombre y función */
 .team-member p {
   color: var(--azul-oscuro);
-  font-size: 1rem;
-  margin: 5px 0;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 10px 0 0 0;
 }
 
+/* Responsivo */
+@media(max-width: 768px){
+  .hero h1 { font-size: 3rem; }
+  .hero h2 { font-size: 1.8rem; }
+  section h2 { font-size: 3rem; }
+  .card-presentacion, .card-metas { padding: 25px; font-size: 1.3rem; line-height: 1.8rem; }
+  .team-member { width: 160px; padding: 20px; }
+  .team-member img { width: 100px; height: 100px; }
+}
 
-
-    /* Responsivo */
-    @media(max-width: 600px) {
-      .logo-container {
-        width: 300px;
-        height: 300px;
-      }
-
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero h2 {
-        font-size: 1.2rem;
-      }
-    }
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-  <div class="logo">
-    <!-- Reemplaza 'imagenes/logo.png' por la ruta de tu imagen -->
-    <img src="imagenes/logo.jpg" alt="Aquasense" class="logo-img">
-  </div>
+
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="funcionamiento.html">Sobre el proyecto</a>
-    <a href="prototipo.html">Sobre el prototipo</a>
-   <a href="manual.html">Manual de usuario</a>
-    <a href="soporte.html">soporte</a>
+    <a href="problemas.html">problematica</a>
+    <a href="marco.html">marco teorico y prototipo</a>
+    <a href="conclusion.html">conclusion</a>
   </nav>
 </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="logo-container">
-      <img src="imagenes/logo.jpg" alt="Logo Aquasense" class="logo">
-    </div>
-    <h1>Aquasens</h1>
-    <h2>Cada gota cuenta.  
-
-Con Aquasens, ninguna se pierde sin ser escuchada.  
-
-Tecnología que siente el agua, para un planeta que respira vida. </h2>
-    <hr>
   </section>
 
-  <!-- Sección Quiénes Somos -->
+
 <section class="quienes-somos" id="sobre">
-  <h2>Quiénes Somos</h2>
+  <h2>Introduccion</h2>
   <div class="card-presentacion">
     <p>
-      En <strong>Aquasens</strong> somos un equipo de expertos apasionados por la tecnología y la eficiencia hídrica. 
-      Nuestro objetivo es ofrecer soluciones innovadoras para la detección de fugas de agua, ayudando a hogares y empresas a proteger sus recursos, ahorrar dinero y cuidar el medio ambiente.
+      En la actualidad, la gestión eficiente de las micro y pequeñas empresas representa un desafío constante, especialmente en contextos económicos en vías de desarrollo como el de Nicaragua. Las pulperías, al ser un elemento esencial del comercio local, requieren herramientas tecnológicas que faciliten la administración de inventarios, ventas y control financiero. Sin embargo, gran parte de estos negocios aún dependen de métodos manuales que dificultan la precisión en los registros y la toma de decisiones estratégicas. 
+
+ 
     </p>
 
   </div>
@@ -316,75 +251,29 @@ Tecnología que siente el agua, para un planeta que respira vida. </h2>
 
   <!-- Sección Quiénes Somos -->
 <section class="quienes-somos" id="sobre">
-  <h2>Misión y Visión</h2>
+  <h2>Objetivo general </h2>
   <div class="card-presentacion">
-    <h3>Misión</h3>
     <p>
-      Desarrollar y ofrecer soluciones portátiles, accesibles y sostenibles para la detección temprana de fugas en tuberías, utilizando tecnología innovadora y materiales reciclados, que permitan a hogares, industrias y comunidades proteger sus recursos hídricos y reducir pérdidas económicas.
+   Diseñar una aplicación móvil para la gestión de las pulperías del Distrito I de Managua, que permita el control de inventarios, el registro de ventas y la generación de reportes, adaptada a las condiciones y necesidades de microempresas del sector comercio. 
     </p>
- <h3>Visión</h3>
-<p>Visión
-ser la referencia líder en innovación ecológica para el monitoreo de tuberías a nivel Nacional y Latinoaméricano promoviendo la conciencia ambiental, la producción sostenible y el uso inteligente de la tecnología para un futuro con mejor gestión del agua y recursos naturales.</p>
-  </div>
+
 </section>
 <hr>
 
 <!-- Sección Nuestras Metas -->
 <section class="nuestras-metas" id="metas">
-  <h2>Nuestras Metas</h2>
+  <h2>Objetivos especificos</h2>
   <div class="card-metas">
     <p>
-      En <strong>Aquasens</strong> nos comprometemos a:<br>
-      1️⃣ Detectar fugas de agua en tiempo real con máxima precisión.<br>
-      2️⃣ Reducir el desperdicio de agua en hogares y empresas.<br>
-      3️⃣ Concienciar sobre el uso responsable del agua.<br>
-      4️⃣ Innovar constantemente para ofrecer soluciones más efectivas y sostenibles.
+      1️⃣ Analizar las principales limitaciones en la administración e inventario de pulperías en contextos urbanos de Nicaragua, con énfasis en el Distrito I de Managua.<br>
+      2️⃣ Determinar los requisitos funcionales y no funcionales que debe cumplir la aplicación móvil para su fácil adopción y uso por parte de propietarios de pulperías. <br>
+      3️⃣ Proponer un diseño de interfaz intuitiva que facilite la gestión operativa diaria y minimice errores en el registro de datos. <br>
+      4️⃣ Definir las funcionalidades clave que permitan el control eficiente de inventarios, ventas y utilidades, incluso sin conexión constante a internet. 
     </p>
   </div>
 </section>
 <hr>
 
-<!-- Sección Equipo de Trabajo -->
-<section class="equipo-trabajo" id="equipo">
-  <h2>Equipo de Trabajo</h2>
-  <div class="team">
-    <div class="team-member">
-      <img src="imagenes/Imagen de WhatsApp 2025-10-10 a las 11.33.12_78268142.jpg" alt="Persona 1">
-      <p><strong>Rodrigo Merlo</strong></p>
-      <p>Pogramador</p>
-    </div>
-    <div class="team-member">
-      <img src="imagenes/persona2.jpg" alt="Persona 2">
-      <p><strong>Sunyel Largaespada</strong></p>
-      <p>Secretario</p>
-    </div>
-    <div class="team-member">
-      <img src="imagenes/persona3.jpg" alt="Persona 3">
-      <p><strong>Angel Sanchez</strong></p>
-      <p>Pogramador</p>
-    </div>
-    <div class="team-member">
-      <img src="imagenes/persona4.jpg" alt="Persona 4">
-      <p><strong>Haringtong Umaña</strong></p>
-      <p>Líder</p>
-    </div>
-    <div class="team-member">
-      <img src="imagenes/persona5.jpg" alt="Persona 5">
-      <p><strong>Genesis Álvarez </strong></p>
-      <p>Área de  Diseño gráfico</p>
-    </div>
-    <div class="team-member">
-      <img src="imagenes/persona6.jpg" alt="Persona 6">
-      <p><strong>Yeslie Miranda</strong></p>
-     <p>Área de Contabilidad</p>
-    </div>
-    <div class="team-member">
-      <img src="imagenes/persona7.jpg" alt="Persona 7">
-      <p><strong>Milagros Zeledón</strong></p>
-      <p>Área de Contabilidad</p>
-    </div>
-  </div>
-</section>
 
 
 </body>
